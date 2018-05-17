@@ -4,39 +4,48 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
-		    $("button").click(function(){
-		  //   	$.ajaxSetup({
-				//     beforeSend: function(xhr){
-		  //       		xhr.setRequestHeader("api-key", "U9G1L457H6DCugT7VmBaEacbHV9RX0PySO05cYaGsm");
-		  //       	}, 
-				// });
+		    // $("button").click(function(){
 		        $.ajax({ 
 		        	type : "GET",
-		      //   	headers: {
-				    //     'api-key' : 'U9G1L457H6DCugT7VmBaEacbHV9RX0PySO05cYaGsm',
-				    //     'Content-Type': 'text/plain'
-				    // },
-				    //dataType: "json",
+				    url : "https://iapi.bot.or.th/Stat/LoanRate/loan_rate_v1/?start_period=2018-05-01&end_period=2018-05-15",
 		        	beforeSend: function(xhr){
-		        		xhr.setRequestHeader("api-key", "U9G1L457H6DCugT7VmBaEacbHV9RX0PySO05cYaGsm");
+		        		xhr.setRequestHeader('api-key', 'U9G1L457H6DCugT7VmBaEacbHV9RX0PySO05cYaGsm');
 		        	}, 
-		        	url : "https://iapi.bot.or.th/Stat/LoanRate/loan_rate_v1/?start_period=2017-06-01&end_period=2017-06-30", 
 		        	success : function(result) { 
-		        		$("#div1").html(result); 
+		        		 $("#div1").html(JSON.stringify(result)); 
+		        		 var res = result;
+		        		 // console.log(res);
+		        		 tmp = res.result.data.data_detail;
+		        		 // console.log(tmp);
+		        		 for(i=0;i<30;i++){
+		        		 	// if(tmp[i].period=='2018-05-02' && tmp[i].bank_name_eng=='Bangkok Bank'){
+		        		 	if(tmp[i].period=='2018-05-02'){
+		        		 		bank = tmp[i].bank_name_eng;
+		        		 		mlr = tmp[i].mlr;
+		        		 		mor = tmp[i].mor;
+		        		 		mrr = tmp[i].mrr;
+		      //   		 		var fso  = new ActiveXObject("Scripting.FileSystemObject");
+		      //   		 		var fh = fso.OpenTextFile("/Users/inzzpk/React/apitest/csv/Test.txt", 8, True);
+								// fh.WriteLine(`6,60,${mlr},${mor},${mrr}`);
+		        		 		console.log(`${bank} -> 6,60,${mlr},${mor},${mrr}`);
+		        		 		$("#div2").html(`${bank} -> 6,60,${mlr},${mor},${mrr}`); 
+		        		 	}
+		        		 }
 		        	}, 
 		        	error : function(result) { 
 		           		$("#div1").html(result); 
 		         } 
 		       }); 
-		    });
+		    // });
 		});
 	</script>
 	</head>
 	<body>
 
-		<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+		<!-- <div id="div1"><h2>Show Api</h2></div> -->
 
-		<button>Get External Content</button>
+		<div id="div2"><h2>Show Api</h2></div>
+		<!-- <button>Click!!</button> -->
 
 	</body>
 </html>
