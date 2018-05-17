@@ -16,6 +16,7 @@
 		        		 var res = result;
 		        		 // console.log(res);
 		        		 tmp = res.result.data.data_detail;
+		        		 var arr = new Array();
 		        		 // console.log(tmp);
 		        		 for(i=0;i<30;i++){
 		        		 	// if(tmp[i].period=='2018-05-02' && tmp[i].bank_name_eng=='Bangkok Bank'){
@@ -27,10 +28,14 @@
 		      //   		 		var fso  = new ActiveXObject("Scripting.FileSystemObject");
 		      //   		 		var fh = fso.OpenTextFile("/Users/inzzpk/React/apitest/csv/Test.txt", 8, True);
 								// fh.WriteLine(`6,60,${mlr},${mor},${mrr}`);
+								arr[i] = JSON.stringify(`<br>${bank} -> 6,60,${mlr},${mor},${mrr}`);
+								console.log(i);
+								console.log(tmp[i]);
 		        		 		console.log(`${bank} -> 6,60,${mlr},${mor},${mrr}`);
-		        		 		$("#div2").html(`${bank} -> 6,60,${mlr},${mor},${mrr}`); 
+		        		 		//$("#div2").html(`${bank} -> 6,60,${mlr},${mor},${mrr}`); 
 		        		 	}
 		        		 }
+		        		 $("#div3").html(`${arr}`);
 		        	}, 
 		        	error : function(result) { 
 		           		$("#div1").html(result); 
@@ -45,6 +50,7 @@
 		<!-- <div id="div1"><h2>Show Api</h2></div> -->
 
 		<div id="div2"><h2>Show Api</h2></div>
+		<div id="div3"><h2>Show Api</h2></div>
 		<!-- <button>Click!!</button> -->
 
 	</body>
