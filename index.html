@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		    $("button").click(function(){
+		  //   	$.ajaxSetup({
+				//     beforeSend: function(xhr){
+		  //       		xhr.setRequestHeader("api-key", "U9G1L457H6DCugT7VmBaEacbHV9RX0PySO05cYaGsm");
+		  //       	}, 
+				// });
+		        $.ajax({ 
+		        	type : "GET",
+		      //   	headers: {
+				    //     'api-key' : 'U9G1L457H6DCugT7VmBaEacbHV9RX0PySO05cYaGsm',
+				    //     'Content-Type': 'text/plain'
+				    // },
+				    //dataType: "json",
+		        	beforeSend: function(xhr){
+		        		xhr.setRequestHeader("api-key", "U9G1L457H6DCugT7VmBaEacbHV9RX0PySO05cYaGsm");
+		        	}, 
+		        	url : "https://iapi.bot.or.th/Stat/LoanRate/loan_rate_v1/?start_period=2017-06-01&end_period=2017-06-30", 
+		        	success : function(result) { 
+		        		$("#div1").html(result); 
+		        	}, 
+		        	error : function(result) { 
+		           		$("#div1").html(result); 
+		         } 
+		       }); 
+		    });
+		});
+	</script>
+	</head>
+	<body>
+
+		<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+		<button>Get External Content</button>
+
+	</body>
+</html>
