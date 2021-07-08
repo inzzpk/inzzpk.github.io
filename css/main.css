@@ -1297,39 +1297,39 @@ textarea.form-control, textarea.form-control:focus {
 
 /* --- Skills Values --- */
 .skills-second-style .skill-container.skill-1 .skill-percentage {
-  width: 95%;
-}
-
-.skills-second-style .skill-container.skill-2 .skill-percentage {
-  width: 65%;
-}
-
-.skills-second-style .skill-container.skill-3 .skill-percentage {
-  width: 80%;
-}
-
-.skills-second-style .skill-container.skill-4 .skill-percentage {
-  width: 90%;
-}
-
-.skills-second-style .skill-container.skill-5 .skill-percentage {
-  width: 95%;
-}
-
-.skills-second-style .skill-container.skill-6 .skill-percentage {
-  width: 85%;
-}
-
-.skills-second-style .skill-container.skill-7 .skill-percentage {
-  width: 100%;
-}
-
-.skills-second-style .skill-container.skill-8 .skill-percentage {
   width: 75%;
 }
 
-.skills-second-style .skill-container.skill-9 .skill-percentage {
+.skills-second-style .skill-container.skill-2 .skill-percentage {
+  width: 50%;
+}
+
+.skills-second-style .skill-container.skill-3 .skill-percentage {
+  width: 60%;
+}
+
+.skills-second-style .skill-container.skill-4 .skill-percentage {
+  width: 70%;
+}
+
+.skills-second-style .skill-container.skill-5 .skill-percentage {
+  width: 85%;
+}
+
+.skills-second-style .skill-container.skill-6 .skill-percentage {
   width: 90%;
+}
+
+.skills-second-style .skill-container.skill-7 .skill-percentage {
+  width: 60%;
+}
+
+.skills-second-style .skill-container.skill-8 .skill-percentage {
+  width: 85%;
+}
+
+.skills-second-style .skill-container.skill-9 .skill-percentage {
+  width: 70%;
 }
 
 /* --- End of Skills Values --- */
@@ -1391,7 +1391,7 @@ textarea.form-control, textarea.form-control:focus {
   width: 120px;
   height: 100%;
   background-color: #f5f5f5;
-  padding: 25px;
+  /* padding: 25px; */
   vertical-align: middle;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
