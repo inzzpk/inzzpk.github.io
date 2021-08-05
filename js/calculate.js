@@ -21,7 +21,7 @@ function submit_by_id() {
   }
   
 
-  var total = totalStart + totalCon
+  var total = Math.ceil(totalStart + totalCon)
 
   console.log("numStartDose>>>",numStartDose)
   console.log("numConDose>>>",numConDose)
@@ -39,3 +39,10 @@ function submit_by_id() {
 
 
 }
+
+const node = document.getElementById("form_weight");
+node.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+      submit_by_id()
+    }
+});

@@ -1,0 +1,75 @@
+.input_weight {
+  line-height: 1.5 !important;
+  font-size: 1.5em !important;
+  height: auto !important;
+}
+
+.btn-send {
+  width: 50%;
+}
+
+.output {
+  line-height: 1.5 !important;
+  font-size: 1.2em !important;
+  height: auto !important;
+  color: black !important;
+  opacity: 1;
+}
+
+.output-total {
+  line-height: 1.5 !important;
+  font-size: 1.2em !important;
+  height: auto !important;
+  color: red !important;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 540px) {
+  .single-page-content {
+    padding: 30px 20px !important;
+  }
+  .input_weight {
+    line-height: 1.2 !important;
+    font-size: 1.2em !important;
+    height: auto !important;
+  }
+  
+  .btn-send {
+    width: 100%;
+  }
+  
+  .output {
+    line-height: 1.2 !important;
+    font-size: 1em !important;
+    height: auto !important;
+    color: black !important;
+    opacity: 1;
+  }
+  
+  .output-total {
+    line-height: 1.2 !important;
+    font-size: 1em !important;
+    height: auto !important;
+    color: red !important;
+    opacity: 1;
+  }
+
+  h3 {
+    font-size: 18px !important;
+  }
+
+  label {
+    font-size: 13px !important;
+  }
+
+  .col {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
+
+@media only screen and (min-width: 541px) and (max-width: 720px) {
+  .single-page-content {
+    padding: 45px !important;
+  }
+}
