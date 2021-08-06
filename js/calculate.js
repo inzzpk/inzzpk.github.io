@@ -21,7 +21,14 @@ function submit_by_id() {
   
   var total = Math.ceil(totalStart + totalCon)
 
-  if (form_weight < 2.5) {
+  if (form_weight < 2) {
+    startDose = '-'
+    numStartDose = '-'
+    conDose = '-'
+    numConDose = '-'
+    total = '-'
+  }
+  else if (form_weight < 2.5) {
     startDose = 70
     numStartDose = '70mg (ครึ่งเม็ด ผสมน้ำ 2 ซีซี กิน 1.4 ซีซี)'
     conDose = 30
