@@ -8,11 +8,19 @@
   width: 50%;
 }
 
-.output {
+.output-1 {
   line-height: 1.5 !important;
   font-size: 1.2em !important;
   height: auto !important;
-  color: black !important;
+  color: olivedrab !important;
+  opacity: 1;
+}
+
+.output-2 {
+  line-height: 1.5 !important;
+  font-size: 1.2em !important;
+  height: auto !important;
+  color: cornflowerblue !important;
   opacity: 1;
 }
 
@@ -38,11 +46,19 @@
     width: 100%;
   }
   
-  .output {
+  .output-1 {
     line-height: 1.2 !important;
     font-size: 1em !important;
     height: auto !important;
-    color: black !important;
+    color: olivedrab !important;
+    opacity: 1;
+  }
+
+  .output-2 {
+    line-height: 1.2 !important;
+    font-size: 1em !important;
+    height: auto !important;
+    color: cornflowerblue !important;
     opacity: 1;
   }
   

@@ -38,13 +38,25 @@ function submit_by_id() {
     numStartDose = 0.75
     conDose = '60'
     numConDose = '60mg (ครึ่งเม็ด ผสมน้ำ 2 ซีซี กิน 1.2 ซีซี)'
-    total = 5
+    total = 6
   } else if (form_weight < 5.5) {
     startDose = '175'
     numStartDose = '175mg (1 เม็ด ผสมน้ำ 4 ซีซี กิน 3.5 ซีซี)'
     conDose = 70
     numConDose = '70mg (ครึ่งเม็ด ผสมน้ำ 2 ซีซี กิน 1.4 ซีซี)'
     total = 6
+  } else if (form_weight >= 50 && form_weight <= 90) {
+    startDose = 1800
+    numStartDose = 9
+    conDose = 800
+    numConDose = 4
+    total = 50
+  } else if (form_weight > 90) {
+    startDose = 2400
+    numStartDose = 12
+    conDose = 1000
+    numConDose = 5
+    total = 64
   }
   
   
